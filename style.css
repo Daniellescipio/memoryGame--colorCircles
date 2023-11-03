@@ -1,0 +1,52 @@
+#turn{
+    display: none;
+}
+#container{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+#gameboard{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+#orange{
+    background-color: rgb(220, 153, 76);
+}
+#orange.select{
+    background-color: rgb(255, 136, 0);
+    box-shadow: 0px 0px 30px rgb(255, 136, 0);
+}
+#blue{
+    background-color: rgb(106, 106, 240);
+}
+#blue.select{
+    background-color: blue;
+    box-shadow: 0px 0px 30px blue;
+}
+#yellow{
+    background-color: rgb(232, 232, 127);
+}
+#yellow.select{
+    background-color: yellow;
+    box-shadow: 0px 0px 30px yellow;
+}
+#purple{
+    background-color: rgb(143, 71, 143)
+}
+#purple.select{
+    background-color: purple;
+    box-shadow: 0px 0px 30px purple;
+}
+.won{
+    background-color: green !important;
+}
+.lost{
+    background-color: red !important;
+}
+.circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 10px 24px;
+}
