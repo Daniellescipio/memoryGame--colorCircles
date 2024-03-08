@@ -8,7 +8,7 @@ const turnMessage =  document.getElementById("turn")
 const gameBoard = document.getElementById("gameboard")
 const startButton =  document.querySelector("button")
 const circles = gameBoard.children
-const test =  document.querySelector("test")
+//const test =  document.querySelector("test")
 //copy the array over so we can manipulate/use it.
 const circleArray = [...circles]
 //keeps track of how many colors should be chosen and how fast they will be chosen. 
@@ -29,7 +29,7 @@ let activeSeq = false
 
 //function that choses the colors
 const colorSequence = ()=>{
-    currentSequence = sequenceArray
+    //currentSequence = sequenceArray
     //start by clearing any delays that might exist
     clearTimeout(clearTimeoutId)
     //if the number of colors already chosen equals the number of colors that should be chosen...
@@ -63,7 +63,7 @@ const checkSequence = (e)=>{
     clearTimeout(clearTimeoutId)
     //the user can only guess when the computer is not adding colors to the sequence.
     if(!activeSeq){
-        red.setAttribute("id")
+        //red.setAttribute("id")
         //get the color of the circle the user guessed/clicked on
         const color = e.target.getAttribute("id")
         //Ok, so here's the logic....
@@ -107,9 +107,9 @@ const checkSequence = (e)=>{
                     e.target.classList.remove("select")
                 }, 300)
             }
-            //if they guess the wrong color remove the highlight and turn all the circles red, set a start over message, display the start button and reset level time and loops, sequence and the entire sequnce array. 
+            //if they guess the wrong color remove the highlight and turn all the circles read, set a start over message, display the start button and reset level time and loops, sequence and the entire sequnce array. 
         }else{
-            test.setAttribute("id", 1)
+           // test.setAttribute("id", 1)
             circleArray.map(circle=>{
                 circle.classList.remove("select")
                 circle.classList.add("lost")
@@ -138,7 +138,7 @@ startButton.addEventListener("click", ()=>{
     clearIntervalId = setInterval(colorSequence, level.time)
     //hide the start button.
     startButton.style.display = "none"
-    roundText.map((round)=>{console.log("hey")})
+    //roundText.map((round)=>{console.log("hey")})
 })
 
 circleArray.map(circle=>circle.addEventListener("click", checkSequence))
